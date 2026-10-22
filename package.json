@@ -1,0 +1,20 @@
+{
+  "name": "coverboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "generate-demo-license": "node scripts/generate-demo-license.mjs",
+    "build": "tsc && vite build && node scripts/build-sw.mjs",
+    "test": "vitest run src",
+    "test:e2e": "npm run build && playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@vitest/coverage-v8": "^4.1.12",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.3",
+    "vitest": "^4.1.11"
+  }
+}
